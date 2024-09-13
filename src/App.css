@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'PlusJakartaSans';
+  src: local('PlusJakartaSans'), url(../public/PlusJakartaSans-VariableFont_wght.ttf) format('truetype');
+}
+h1{
+  font-family: "PlusJakartaSans";
+}
 .App {
   text-align: center;
 }
@@ -32,7 +39,223 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #e3f4fc;
+}
+.calculatorContainer{
+  background-color: #ffffff;
+  width: 800px;
+  height: 560px;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+.userInputContainer{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+.outputContainer{
+  width: 50%;
+  height: 100%;
+  border-bottom-left-radius: 60px;
+  background-color: #133040 ;
+}
+.mortageTitleContainer{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.titleText{
+  margin: 0;
+  font-size: 23px;
+  width: auto;
+  height: auto;
+  color: #132730;
+}
+.clearBtn{
+  background-color: #13304000;
+  border: none;
+  text-decoration:underline;
+  color: #778286;
+}
+.inputContainer{
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+.inputLabel{
+  font-size: 14px;
+  font-weight: 500;
+  color: #778286;
+}
+.inputField{
+  height: 40px;
+  border: 1px solid #808f94;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.inputField.error{
+  border: 1px solid red;
+}
+.inputField.active{
+  border: 1px solid #b4b728;
+}
+.inputField input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-family: "PlusJakartaSans";
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+.inputContainerChild input:active {
+
+}
+.inputIconContainer{
+  padding: 15px;
+  width: auto;
+  height: 100%;
+  background-color: #e2f5fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.inputIconContainer.active{
+  background-color: #d9db32;
+}
+.inputIconContainer.error{
+  background-color: red;
+}
+.inputIconContainer.error h1{
+  color: white;
+}
+.inputTermContainer{
+  width: 80%;
+  height: 100%;
+  background-color: #e2f5fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formatText{
+  color: #526873;
+  font-size: 15px;
+}
+.inputContainerChild{
+  width: 50%;
+  height: 100%;
+}
+.termRateContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.radio{
+  background-color: #d7da49;
+  accent-color: #d7da49;
+}
+.radioContainer{
+  height: 150px;
+}
+.selectContainer{
+  margin-top: 10px;
+  height: 40px;
+  border: solid 1px #808f94;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.selectContainer.selected{
+  border: solid 1px #cdd28e;
+  background-color: #fafae0;
+}
+.radio:checked + .selectContainer{
+  background-color: yellow;
+}
+.selectContainer h1{
+  font-size: 15px;
+  margin-left: 10px;
+}
+.submitButton{
+  width: 70%;
+  height: 55px;
+  margin-top: 20px;
+  border-radius: 50px;
+  border: none;
+  background-color: #d9db30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s all ease-in-out;
+}
+.submitButton:hover{
+  cursor: pointer;
+  background-color: #b4b728;
+}
+.submitButton h1{
+  font-size: 16px;
+}
+.submitButton img{
+  height: 50%;
+}
+.clearBtn:hover{
+  cursor: pointer;
+}
+.errorText{
+  font-size: 10px;
+  font-weight: 600;
+  height: auto;
+  color: red;
+  font-family: PlusJakartaSans;
+}
+@media only screen and (max-width: 768px) {
+  .container{
+    height: 1500px;
+    align-items: start;
+    padding-top: 25px;
+  }
+  .calculatorContainer{
+    flex-direction: column;
+    width: 95%;
+    height: 1050px;
+  }
+  .userInputContainer{
+    width: 90%;
+    height: 50%;
+  }
+  .outputContainer{
+    height: 50%;
+    width: 100%;
+    border-radius: 0;
   }
 }

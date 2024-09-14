@@ -5,6 +5,9 @@
 h1{
   font-family: "PlusJakartaSans";
 }
+p{
+  font-family: "PlusJakartaSans";
+}
 .App {
   text-align: center;
 }
@@ -67,8 +70,8 @@ h1{
   width: 50%;
   height: 100%;
   display: flex;
-  padding: 20px;
   flex-direction: column;
+  align-items: center;
 }
 .outputContainer{
   width: 50%;
@@ -77,11 +80,12 @@ h1{
   background-color: #133040 ;
 }
 .mortageTitleContainer{
-  width: 100%;
+  width: 85%;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 15px;
 }
 .titleText{
   margin: 0;
@@ -97,7 +101,7 @@ h1{
   color: #778286;
 }
 .inputContainer{
-  width: 100%;
+  width: 85%;
   height: 110px;
   display: flex;
   justify-content: start;
@@ -133,9 +137,6 @@ h1{
   display: flex;
   align-items: center;
   padding-left: 15px;
-}
-.inputContainerChild input:active {
-
 }
 .inputIconContainer{
   padding: 15px;
@@ -177,6 +178,7 @@ h1{
   display: flex;
   flex-direction: row;
   gap: 20px;
+  width: 85%;
 }
 .radio{
   background-color: #d7da49;
@@ -184,6 +186,7 @@ h1{
 }
 .radioContainer{
   height: 150px;
+  width: 85%;
 }
 .selectContainer{
   margin-top: 10px;
@@ -238,6 +241,89 @@ h1{
   color: red;
   font-family: PlusJakartaSans;
 }
+.outputContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.outputPreview{
+  width: 90%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+.outputPreview h1{
+  font-size: 24px;
+  color: white;
+}
+.outputPreview p{
+  font-size: 13.5px;
+  color: #5d7a8c;
+  text-align: center;
+  font-weight: 500;
+}
+.resultPreview{
+  width: 90%;
+  height: 90%;
+}
+.resultPreview h1{
+  color: white;
+  font-size: 26px;
+}
+.resultPreview p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #5d7a8c;
+}
+.resultContainer{
+  width: 100%;
+  height: 300px;
+}
+.result{
+  margin-top: 40px;
+  width: 100%;
+  height: 90%;
+  background-color: #0e2431;
+  border-radius: 7px;
+  border-top: 5px solid #d9db30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.monthlyContainer{
+  width: 90%;
+  height: 45%;
+  border-bottom: 1px solid gray;
+}
+.monthlyContainer p{
+  margin-top: 10px;
+}
+.monthlyContainer h1{
+  color: #d9db30;
+  font-size: 45px;
+  height: auto;
+  margin: 0;
+}
+.totalContainer{
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.totalContainer h1{
+  margin: 0;
+  font-size: 23px;
+}
+.totalContainer p{
+  margin-top: 30px;
+}
+
 @media only screen and (max-width: 768px) {
   .container{
     height: 1500px;

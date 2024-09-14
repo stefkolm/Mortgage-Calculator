@@ -138,6 +138,9 @@ p{
   align-items: center;
   padding-left: 15px;
 }
+.inputField input:hover{
+  cursor: pointer;
+}
 .inputIconContainer{
   padding: 15px;
   width: auto;
@@ -207,6 +210,9 @@ p{
 .selectContainer h1{
   font-size: 15px;
   margin-left: 10px;
+}
+.selectContainer:hover{
+  cursor: pointer;
 }
 .submitButton{
   width: 70%;
@@ -343,5 +349,8 @@ p{
     height: 50%;
     width: 100%;
     border-radius: 0;
+  }
+  .submitButton h1{
+    font-size: 14px;
   }
 }

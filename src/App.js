@@ -94,9 +94,13 @@ export default function Board() {
       type: selectedType === ""
     };
     setErrors(newErrors);
+    const hasErrors = Object.values(newErrors).some(value => value === true);
+    if(hasErrors){
+      return;
+    }
     const mothlyResult = calculateMortgage(mortgageAmount, mortgageTerm, interestRate, selectedType);
     setMonthly(mothlyResult);
-    setTotal(formatNumber(String(mothlyResult * mortgageTerm * 12)));
+    setTotal((mothlyResult * mortgageTerm * 12).toFixed(2));
     controls.start({
       y: -100, // Example animation: fade in
       opacity: 0,
